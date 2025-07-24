@@ -1,0 +1,155 @@
+.text-color{
+    color: #E95A08;
+}
+.badge-container {
+    position: absolute;
+    top: -20px; /* Adjust as needed */
+    left: -20px; /* Adjust as needed */
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+        .section-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Ensure it takes full width within max-width */
+        }
+
+        /* Image Section */
+        .image-wrapper {
+            flex: 1;
+            position: relative;
+            margin-right: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 300px; /* Prevent image from becoming too small */
+        }
+
+        .image-wrapper img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .trusted-seller-badge {
+            position: absolute;
+            top: -110px; 
+            right: -130px; 
+            width: 250px; 
+            height: 250px; 
+            background-image: url('trusted-badge.png'); 
+            background-size: contain; 
+            background-position: 74% 17%; 
+            background-repeat: no-repeat;
+            z-index: 10; 
+            overflow: hidden; 
+            
+        }
+
+        /* Content Section */
+        .content-wrapper {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .content-wrapper h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+            line-height: 1.2;
+        }
+
+        .content-wrapper ul {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+            margin: 0;
+        }
+
+        .content-wrapper ul li {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #555;
+            position: relative;
+            padding-left: 25px; /* Space for custom bullet */
+        }
+
+        .content-wrapper ul li::before {
+            content: '•'; /* Custom bullet point */
+            color: #555; /* Color of the bullet */
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .section-container {
+                flex-direction: column; /* Stack items vertically */
+                padding: 20px;
+            }
+
+            .image-wrapper {
+                margin-right: 0; /* Remove right margin */
+                margin-bottom: 30px; /* Add bottom margin for spacing */
+                width: 100%; /* Ensure image wrapper takes full width */
+                min-width: unset; /* Remove min-width for mobile */
+            }
+
+            .content-wrapper {
+                padding-left: 0; /* Remove left padding */
+                text-align: left; /* Ensure content is left-aligned */
+                width: 100%; /* Ensure content wrapper takes full width */
+            }
+
+            .content-wrapper h1 {
+                font-size: 38px; /* Adjust font size for mobile */
+                text-align: left; /* Ensure title is left-aligned */
+            }
+
+            .content-wrapper ul li {
+                font-size: 16px; /* Adjust font size for mobile */
+            }
+
+            .trusted-seller-badge {
+                /* Adjust badge position for mobile if needed */
+                top: 0px; /* Example adjustment */
+                right: 0px; /* Example adjustment */
+                width: 80px; /* Smaller badge for mobile */
+                height: 80px; /* Smaller badge for mobile */
+            }
+        }
+
+        /* Further adjustments for very small screens */
+        @media (max-width: 480px) {
+            .section-container {
+                padding: 15px;
+            }
+
+            .content-wrapper h1 {
+                font-size: 32px;
+            }
+
+            .content-wrapper ul li {
+                font-size: 15px;
+            }
+        }
